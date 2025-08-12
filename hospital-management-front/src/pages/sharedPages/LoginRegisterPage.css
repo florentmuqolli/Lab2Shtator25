@@ -78,7 +78,6 @@
   line-height: 1.5;
 }
 
-/* Unified Form Styles - Applied to both login and register forms */
 .auth-form {
   width: 100%;
   display: flex;
@@ -146,7 +145,6 @@
   cursor: not-allowed;
 }
 
-/* Footer/Toggle Button */
 .auth-footer {
   margin-top: 1.5rem;
   text-align: center;
@@ -170,8 +168,43 @@
   text-decoration: underline;
 }
 
-/* Responsive Design */
+.auth-back-button {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0.5rem;
+  padding-left: 0;
+}
+
+.auth-back-icon {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+  transition: var(--transition);
+}
+
+.auth-back-button:hover {
+  color: var(--primary-hover);
+}
+
+.auth-back-button:hover .auth-back-icon {
+  transform: translateX(-3px);
+}
+
 @media (max-width: 768px) {
+  .auth-back-button {
+    top: 1rem;
+    left: 1rem;
+  }
+
   .auth-page {
     flex-direction: column;
   }
@@ -183,6 +216,7 @@
   }
 
   .auth-container {
+    position: relative;
     padding: 2rem 1.5rem;
     max-width: 100%;
   }
