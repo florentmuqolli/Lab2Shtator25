@@ -9,23 +9,29 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <Header />
-      <div className="home-page-content">
-        <img className="home-page-image" src={DoctorImage} alt="" />
-        <div className="home-page-text">
-          <h2 className="home-page-text-title">Health care</h2>
-          <h2 className="home-page-text-title-second">For hole family</h2>
-          <p className="home-page-text-content">
-            In the healthcare sector, service excellence is the ability of a
-            hospital as a healthcare service provider to consistently deliver
-            high-quality care
-          </p>
+      <section id="home" className="hero-section">
+        <div className="hero-content">
+          <div className="hero-text">
+            <h1 className="hero-title">
+              <span className="hero-title-main">Health care</span>
+              <span className="hero-title-sub">For the whole family</span>
+            </h1>
+            <p className="hero-description">
+              In the healthcare sector, service excellence is the ability of a
+              hospital as a healthcare service provider to consistently deliver
+              high-quality care that meets and exceeds patient expectations.
+            </p>
+            <button className="cta-button">Book an Appointment</button>
+          </div>
+          <div className="hero-image-container">
+            <img className="hero-image" src={DoctorImage} alt="Doctor consulting with patient" />
+          </div>
         </div>
-      </div>
-      <AboutUs/>
-      <Contact/>
+      </section>
+      <AboutUs />
+      <Contact />
     </div>
   );
 };
 
 export default HomePage;
-
