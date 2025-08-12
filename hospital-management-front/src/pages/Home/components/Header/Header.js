@@ -16,6 +16,7 @@ const Header = () => {
                     <a className="nav-link" href="#home">Home</a>
                     <a className="nav-link" href="#about">About</a>
                     <a className="nav-link" href="#contact">Contact</a>
+                    <button className="header-content-login" onClick={() => navigate("/nurse")}>test</button>
                     <button className="header-content-login" onClick={() => navigate("/login")}>Login</button>
                 </nav>
             </div>
