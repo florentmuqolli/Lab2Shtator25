@@ -17,15 +17,12 @@ const LoginForm = () => {
   const validate = () => {
     const newErrors = {};
     
-    if (!formData.email) {
-      newErrors.email = 'Email is required';
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)) {
-      newErrors.email = 'Invalid email address';
+    if (!formData.email) newErrors.email = 'Email is required';
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email';
     }
     
-    if (!formData.password) {
-      newErrors.password = 'Password is required';
-    }
+    if (!formData.password) newErrors.password = 'Password is required';
     
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -33,64 +30,38 @@ const LoginForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-    // Clear error when user types
-    if (errors[name]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: undefined
-      }));
-    }
+    setFormData(prev => ({ ...prev, [name]: value }));
+    if (errors[name]) setErrors(prev => ({ ...prev, [name]: null }));
     if (errorMessage) setErrorMessage(null);
   };
 
   const handleBlur = (e) => {
     const { name } = e.target;
-    setTouched(prev => ({
-      ...prev,
-      [name]: true
-    }));
+    setTouched(prev => ({ ...prev, [name]: true }));
     validate();
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setTouched({
-      email: true,
-      password: true
-    });
-
+    setTouched({ email: true, password: true });
     if (!validate()) return;
 
     setIsSubmitting(true);
     try {
       const response = await loginUser(formData);
-      const token = response.token; 
-  
+      const token = response.token;
+      
       if (token) {
-        const base64Url = token.split('.')[1];
-        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-        const decodedPayload = JSON.parse(atob(base64));
-        const role = decodedPayload.role;
-  
         localStorage.setItem('authToken', token);
-  
-        if (role === 'DOCTOR') {
-          navigate('/doctor/');
-        } else if (role === 'NURSE') {
-          navigate('/nurse/');
-        } else if (role === 'PATIENT') {
-          navigate('/patient/');
-        } else if (role === 'ADMIN') {
-          navigate('/admin/');
-        } else {
-          navigate('/unauthorized');
+        const { role } = JSON.parse(atob(token.split('.')[1]));
+        
+        switch(role) {
+          case 'DOCTOR': navigate('/doctor'); break;
+          case 'NURSE': navigate('/nurse'); break;
+          case 'PATIENT': navigate('/patient'); break;
+          case 'ADMIN': navigate('/admin'); break;
+          default: navigate('/unauthorized');
         }
-      } else {
-        console.log('No token found in response');
       }
     } catch (error) {
       setErrorMessage('Invalid email or password');
@@ -98,55 +69,55 @@ const LoginForm = () => {
       setIsSubmitting(false);
     }
   };
-  
+
   return (
-    <form onSubmit={handleSubmit} className="auth-form">
+    <form className="auth-form" onSubmit={handleSubmit}>
       <div className="form-group">
-        <label htmlFor="email">Email Address</label>
+        <label htmlFor="email" className="form-label">Email Address</label>
         <input
-          id="email"
           type="email"
+          id="email"
           name="email"
-          placeholder="Enter your email"
           value={formData.email}
           onChange={handleChange}
           onBlur={handleBlur}
           className={`form-input ${touched.email && errors.email ? 'error' : ''}`}
+          placeholder="your@email.com"
         />
         {touched.email && errors.email && (
-          <div className="error-message">{errors.email}</div>
+          <span className="error-message">{errors.email}</span>
         )}
       </div>
 
       <div className="form-group">
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password" className="form-label">Password</label>
         <input
-          id="password"
           type="password"
+          id="password"
           name="password"
-          placeholder="Enter your password"
           value={formData.password}
           onChange={handleChange}
           onBlur={handleBlur}
           className={`form-input ${touched.password && errors.password ? 'error' : ''}`}
+          placeholder="••••••••"
         />
         {touched.password && errors.password && (
-          <div className="error-message">{errors.password}</div>
+          <span className="error-message">{errors.password}</span>
         )}
       </div>
 
       {errorMessage && (
-        <div className="error-message" style={{ textAlign: 'center', marginTop: '-0.5rem' }}>
+        <div className="error-message" style={{ textAlign: 'center' }}>
           {errorMessage}
         </div>
       )}
 
-      <button 
-        type="submit" 
-        className="submit-button" 
+      <button
+        type="submit"
+        className="submit-btn"
         disabled={isSubmitting}
       >
-        {isSubmitting ? 'Logging in...' : 'Sign In'}
+        {isSubmitting ? 'Signing In...' : 'Sign In'}
       </button>
     </form>
   );
