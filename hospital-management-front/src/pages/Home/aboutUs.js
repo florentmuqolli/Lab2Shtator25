@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "../../components/branchCard/branchCard";
 import { data } from "./helper";
-import "./home.css";
+import "./HomePage.css";
 
 const AboutUs = () => {
   return (

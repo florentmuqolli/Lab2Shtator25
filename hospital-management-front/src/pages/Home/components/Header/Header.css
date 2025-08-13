@@ -1,3 +1,4 @@
+/* Header.css */
 .header-container {
     background-color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -10,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    padding: 1rem 5%;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -18,50 +19,83 @@
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 0.75rem;
     cursor: pointer;
-}
-
-.hospital-name {
-    font-size: 24px;
-    font-weight: 700;
-    color: #1a73e8;
-}
-
-.header-content {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-}
-
-.nav-link {
-    color: #5f6368;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: #1a73e8;
 }
 
 .header-img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 
-.header-content-login {
-    background-color: #1a73e8;
+.hospital-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2563eb;
+    letter-spacing: -0.5px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #64748b;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #2563eb;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2563eb;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-button {
+    background-color: #2563eb;
     color: white;
-    padding: 10px 25px;
-    cursor: pointer;
+    padding: 0.5rem 1.5rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-weight: 600;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.header-content-login:hover {
-    background-color: #1557b0;
+.nav-button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .header-nav {
+        gap: 1rem;
+    }
+    
+    .nav-link {
+        font-size: 0.875rem;
+    }
+    
+    .nav-button {
+        padding: 0.5rem 1rem;
+    }
 }

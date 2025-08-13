@@ -9,15 +9,16 @@ const Header = () => {
         <header className="header-container">
             <div className="header">
                 <div className="logo-container" onClick={() => navigate("/")}>
-                    <img className="header-img" src={HospitalLogo} alt="Hospital Logo" />
+                    <img className="header-img" src={HospitalLogo} alt="MediCare+ Logo" />
                     <span className="hospital-name">MediCare+</span>
                 </div>
-                <nav className="header-content">
+                <nav className="header-nav">
                     <a className="nav-link" href="#home">Home</a>
-                    <a className="nav-link" href="#about">About</a>
+                    <a className="nav-link" href="#about">Services</a>
                     <a className="nav-link" href="#contact">Contact</a>
-                    <button className="header-content-login" onClick={() => navigate("/nurse")}>test</button>
-                    <button className="header-content-login" onClick={() => navigate("/login")}>Login</button>
+                    <button className="nav-button" onClick={() => navigate("/login")}>
+                        Access
+                    </button>
                 </nav>
             </div>
         </header>
