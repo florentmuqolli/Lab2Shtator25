@@ -1,9 +1,9 @@
 package com.example.HospitalManagement.controller;
 
-import com.example.HospitalManagment.common.ResponseObject;
-import com.example.HospitalManagment.data.Room.CreateRoom;
-import com.example.HospitalManagment.data.departament.CreateDepartament;
-import com.example.HospitalManagment.service.RoomService;
+import com.example.HospitalManagement.common.ResponseObject;
+import com.example.HospitalManagement.data.Room.CreateRoom;
+import com.example.HospitalManagement.data.departament.CreateDepartament;
+import com.example.HospitalManagement.service.RoomService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
