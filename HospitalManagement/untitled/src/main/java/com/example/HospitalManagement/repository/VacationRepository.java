@@ -1,7 +1,7 @@
-package com.example.HospitalManagment.repository;
+package com.example.HospitalManagement.repository;
 
-import com.example.HospitalManagment.data.vacation.ViewVacation;
-import com.example.HospitalManagment.entity.Vacation;
+import com.example.HospitalManagement.data.vacation.ViewVacation;
+import com.example.HospitalManagement.entity.Vacation;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
