@@ -1,8 +1,8 @@
-package com.example.HospitalManagment.security.auth;
+package com.example.HospitalManagement.security.auth;
 
-import com.example.HospitalManagment.repository.UserRepository;
-import com.example.HospitalManagment.security.service.JwtService;
-import com.example.HospitalManagment.service.UserService;
+import com.example.HospitalManagement.repository.UserRepository;
+import com.example.HospitalManagement.security.service.JwtService;
+import com.example.HospitalManagement.service.UserService;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.MessageSource;

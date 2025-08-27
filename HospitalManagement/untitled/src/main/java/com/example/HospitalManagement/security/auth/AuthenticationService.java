@@ -1,9 +1,9 @@
-package com.example.HospitalManagment.security.auth;
+package com.example.HospitalManagement.security.auth;
 
-import com.example.HospitalManagment.entity.User;
-import com.example.HospitalManagment.repository.RoleRepository;
-import com.example.HospitalManagment.repository.UserRepository;
-import com.example.HospitalManagment.security.service.JwtService;
+import com.example.HospitalManagement.entity.User;
+import com.example.HospitalManagement.repository.RoleRepository;
+import com.example.HospitalManagement.repository.UserRepository;
+import com.example.HospitalManagement.security.service.JwtService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

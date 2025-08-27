@@ -1,4 +1,4 @@
-package com.example.HospitalManagment.security.auth;
+package com.example.HospitalManagement.security.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

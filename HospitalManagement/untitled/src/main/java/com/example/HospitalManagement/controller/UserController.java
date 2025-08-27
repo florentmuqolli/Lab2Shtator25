@@ -1,13 +1,13 @@
-package com.example.HospitalManagment.controller;
+package com.example.HospitalManagement.controller;
 
-import com.example.HospitalManagment.common.ResponseObject;
-import com.example.HospitalManagment.data.RegisterRequestForAllEntityDTO;
+import com.example.HospitalManagement.common.ResponseObject;
+import com.example.HospitalManagement.data.RegisterRequestForAllEntityDTO;
 import com.example.HospitalManagment.data.user.UserDto;
-import com.example.HospitalManagment.data.user.UserView;
-import com.example.HospitalManagment.security.auth.AuthenticationResponse;
-import com.example.HospitalManagment.security.auth.AuthenticationService;
+import com.example.HospitalManagement.data.user.UserView;
+import com.example.HospitalManagement.security.auth.AuthenticationResponse;
+import com.example.HospitalManagement.security.auth.AuthenticationService;
 import com.example.HospitalManagment.security.auth.RegisterRequest;
-import com.example.HospitalManagment.service.UserService;
+import com.example.HospitalManagement.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
