@@ -7,7 +7,7 @@ import com.example.HospitalManagement.entity.User;
 import com.example.HospitalManagement.repository.DoctorRepository;
 import com.example.HospitalManagement.repository.NurseRepository;
 import com.example.HospitalManagement.repository.PatientRepository;
-import com.example.HospitalManagment.repository.UserRepository;
+import com.example.HospitalManagement.repository.UserRepository;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

@@ -11,7 +11,7 @@ import com.example.HospitalManagement.entity.Doctor;
 import com.example.HospitalManagement.entity.Patient;
 import com.example.HospitalManagement.repository.AppointmentRepository;
 import com.example.HospitalManagement.repository.CityRepository;
-import com.example.HospitalManagment.repository.DoctorRepository;
+import com.example.HospitalManagement.repository.DoctorRepository;
 import com.example.HospitalManagement.repository.PatientRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

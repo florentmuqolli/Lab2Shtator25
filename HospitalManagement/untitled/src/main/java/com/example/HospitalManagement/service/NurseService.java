@@ -12,7 +12,7 @@ import com.example.HospitalManagement.entity.Nurse;
 import com.example.HospitalManagement.entity.Room;
 import com.example.HospitalManagement.repository.CityRepository;
 import com.example.HospitalManagement.repository.DepartamentRepository;
-import com.example.HospitalManagment.repository.NurseRepository;
+import com.example.HospitalManagement.repository.NurseRepository;
 import com.example.HospitalManagement.repository.RoomRepository;
 import jakarta.mail.MessagingException;
 import lombok.AllArgsConstructor;
