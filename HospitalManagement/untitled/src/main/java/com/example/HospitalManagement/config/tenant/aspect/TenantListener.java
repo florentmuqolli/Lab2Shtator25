@@ -1,6 +1,7 @@
-package com.example.HospitalManagment.config.tenant.aspect;
+package com.example.HospitalManagement.config.tenant.aspect;
 
-import com.example.HospitalManagment.config.tenant.TenantContext;
+import com.example.HospitalManagement.config.tenant.TenantContext;
+import com.example.HospitalManagement.config.tenant.aspect.TenantAware;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreRemove;
 import jakarta.persistence.PreUpdate;

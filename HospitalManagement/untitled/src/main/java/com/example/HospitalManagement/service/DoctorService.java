@@ -10,14 +10,14 @@ import com.example.HospitalManagement.entity.Department;
 import com.example.HospitalManagement.entity.Doctor;
 import com.example.HospitalManagement.repository.CityRepository;
 import com.example.HospitalManagement.repository.DepartamentRepository;
-import com.example.HospitalManagment.repository.DoctorRepository;
+import com.example.HospitalManagement.repository.DoctorRepository;
 import jakarta.mail.MessagingException;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.List;

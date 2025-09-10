@@ -2,7 +2,6 @@ package com.example.HospitalManagement.service;
 
 import com.amazonaws.services.kms.model.NotFoundException;
 import com.example.HospitalManagement.common.ResponseObject;
-import com.example.HospitalManagement.data.BaseDTO;
 import com.example.HospitalManagement.data.RegisterRequestForAllEntityDTO;
 import com.example.HospitalManagement.data.user.*;
 import com.example.HospitalManagement.entity.User;
@@ -12,7 +11,8 @@ import com.example.HospitalManagement.exception.*;
 import com.example.HospitalManagement.repository.NativeQueryRepository;
 import com.example.HospitalManagement.repository.RoleRepository;
 import com.example.HospitalManagement.repository.UserRepository;
-import com.example.HospitalManagment.security.auth.RegisterRequest;
+import com.example.HospitalManagement.security.auth.RegisterRequest;
+import com.example.HospitalManagement.security.auth.RegisterRequest;
 import com.example.HospitalManagement.security.service.JwtService;
 import com.example.HospitalManagement.security.auth.AuthenticationResponse;
 import jakarta.mail.MessagingException;
@@ -26,14 +26,15 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
 
 import jakarta.validation.ValidationException;
+
+import jakarta.validation.Valid;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
+
 @Service
 @Log4j2
 public class UserService extends BaseService {
@@ -180,7 +181,7 @@ public class UserService extends BaseService {
     }
 
     // edit user from admin
-    public UserView editUser(RegisterRequest request, Long userId) {
+    public UserView editUser(@Valid RegisterRequest request, Long userId) {
         try {
             //validateRegisterRequest(request);
 

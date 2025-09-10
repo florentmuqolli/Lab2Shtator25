@@ -1,4 +1,4 @@
-package com.example.HospitalManagment.config.tenant.aspect;
+package com.example.HospitalManagement.config.tenant.aspect;
 
 public interface TenantAware {
 

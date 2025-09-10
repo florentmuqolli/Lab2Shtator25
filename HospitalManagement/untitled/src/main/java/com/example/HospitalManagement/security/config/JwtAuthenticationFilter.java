@@ -1,6 +1,6 @@
-package com.example.HospitalManagment.security.config;
+package com.example.HospitalManagement.security.config;
 
-import com.example.HospitalManagment.security.service.JwtService;
+import com.example.HospitalManagement.security.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

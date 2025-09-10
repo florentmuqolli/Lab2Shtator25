@@ -1,4 +1,4 @@
-package com.example.HospitalManagment.data.user;
+package com.example.HospitalManagement.data.user;
 
 import com.example.HospitalManagement.enums.Status;
 import lombok.Getter;

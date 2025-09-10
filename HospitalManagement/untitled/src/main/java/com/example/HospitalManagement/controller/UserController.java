@@ -2,11 +2,11 @@ package com.example.HospitalManagement.controller;
 
 import com.example.HospitalManagement.common.ResponseObject;
 import com.example.HospitalManagement.data.RegisterRequestForAllEntityDTO;
-import com.example.HospitalManagment.data.user.UserDto;
+import com.example.HospitalManagement.data.user.UserDto;
 import com.example.HospitalManagement.data.user.UserView;
 import com.example.HospitalManagement.security.auth.AuthenticationResponse;
 import com.example.HospitalManagement.security.auth.AuthenticationService;
-import com.example.HospitalManagment.security.auth.RegisterRequest;
+import com.example.HospitalManagement.security.auth.RegisterRequest;
 import com.example.HospitalManagement.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
@@ -24,7 +24,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 import java.io.IOException;
 import java.util.List;
 

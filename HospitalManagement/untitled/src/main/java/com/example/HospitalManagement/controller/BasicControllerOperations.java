@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import lombok.RequiredArgsConstructor;
 
-import javax.validation.groups.Default;
+import jakarta.validation.groups.Default;
 
 @RequiredArgsConstructor
 public abstract class BasicControllerOperations<S extends BasicServiceOperations<?, E>, E extends BaseEntity> {

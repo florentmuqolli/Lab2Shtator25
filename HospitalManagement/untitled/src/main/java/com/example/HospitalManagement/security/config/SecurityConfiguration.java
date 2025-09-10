@@ -1,4 +1,4 @@
-package com.example.HospitalManagment.security.config;
+package com.example.HospitalManagement.security.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;

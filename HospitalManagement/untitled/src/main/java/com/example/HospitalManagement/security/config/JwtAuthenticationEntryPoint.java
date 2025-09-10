@@ -1,4 +1,4 @@
-package com.example.HospitalManagment.security.config;
+package com.example.HospitalManagement.security.config;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

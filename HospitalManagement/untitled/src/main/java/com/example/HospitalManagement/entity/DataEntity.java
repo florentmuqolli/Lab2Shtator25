@@ -1,7 +1,7 @@
 package com.example.HospitalManagement.entity;
 
-import com.example.HospitalManagment.config.tenant.aspect.TenantAware;
-import com.example.HospitalManagment.config.tenant.aspect.TenantListener;
+import com.example.HospitalManagement.config.tenant.aspect.TenantAware;
+import com.example.HospitalManagement.config.tenant.aspect.TenantListener;
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;

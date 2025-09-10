@@ -47,7 +47,7 @@ public class User extends DataEntity implements UserDetails {
     private Status status;
 
     //@ManyToOne(targetEntity = Role.class, fetch = FetchType.EAGER)
-    //private Role role;
+    private Role role;
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of();
